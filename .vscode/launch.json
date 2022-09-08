@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Rails",
+      "type": "rdbg",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "script": "bin/rails server",
+      "args": [],
+      "useBundler": true,
+      "env": {
+        "WEB_CONCURRENCY": 0
+      }
+    }
+  ]
+}

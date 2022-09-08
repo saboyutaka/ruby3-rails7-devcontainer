@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  app: &app
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    env_file: .env
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/workspace:cached
+      - bundle-volume:/workspace/vendor/bundle
+      - node-module-volume:/workspace/node_modules
+    depends_on:
+      - postgres
+    command: bash -c 'bin/setup && bin/rails s -b 0.0.0.0'
+  # webpacker:
+  #   <<: *app
+  #   command: bin/webpack-dev-server
+  #   ports:
+  #     - 3035:3035
+  postgres:
+    image: postgres:14
+    restart: unless-stopped
+    volumes:
+      - postgres-volume:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: pg
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
+volumes:
+  postgres-volume:
+  bundle-volume:
+  node-module-volume:
