@@ -37,3 +37,4 @@
 vendor/bundle
 .solargraph
 .env
+.gem_rbs_collection/

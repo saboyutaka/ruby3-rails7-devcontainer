@@ -1,0 +1,24 @@
+module ActiveRecord
+  class Base
+    def self.primary_abstract_class: () -> void
+  end
+end
+
+module ActionMailer
+  class Base
+    def self.default: (untyped) -> void
+    def self.layout: (untyped) -> void
+  end
+end
+
+module ActionCable
+  module Channel
+    class Base
+    end
+  end
+
+  module Connection
+    class Base
+    end
+  end
+end

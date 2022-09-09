@@ -13,6 +13,8 @@
         "castwide.solargraph",
         "redhat.vscode-yaml",
         "KoichiSasada.vscode-rdbg",
+        "soutaro.steep-vscode",
+        "soutaro.rbs-syntax",
         "VisualStudioExptTeam.vscodeintellicode",
         "esbenp.prettier-vscode",
         "EditorConfig.EditorConfig"
@@ -25,5 +27,5 @@
     }
   },
   "initializeCommand": "if ! [ -f .env ];then cp .env.sample .env;fi",
-  "postStartCommand": "bundle install && bin/setup && bundle exec solargraph bundle"
+  "postStartCommand": "bundle install && bin/setup && bundle exec rbs collection install && bundle exec solargraph bundle"
 }
