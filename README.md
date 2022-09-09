@@ -51,6 +51,9 @@ devcontainer上で、 `デバッグを実行` を実行する(ショートカッ
 
 `デバッグを実行` を利用すると[VSCode Debugging](https://code.visualstudio.com/docs/editor/debugging)が利用可能
 
+<img width="900" alt="debugging" src="https://user-images.githubusercontent.com/1701108/189269013-1c9c8e8e-f6df-4cc1-b695-4fc9130d85a2.png">
+
+
 ## VSCode extensions
 
 - [rebornix.Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby)
