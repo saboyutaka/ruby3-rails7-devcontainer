@@ -18,6 +18,8 @@
         "EditorConfig.EditorConfig"
       ],
       "settings": {
+        "ruby.useBundler": true,
+        "ruby.format": "rubocop",
         "solargraph.useBundler": true
       }
     }
