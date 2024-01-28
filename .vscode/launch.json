@@ -6,7 +6,7 @@
       "type": "rdbg",
       "request": "launch",
       "cwd": "${workspaceRoot}",
-      "script": "bin/rails server",
+      "script": "bin/rails server -b 0.0.0.0",
       "args": [],
       "useBundler": true,
       "env": {
