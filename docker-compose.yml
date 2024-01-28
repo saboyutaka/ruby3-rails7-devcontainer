@@ -1,11 +1,10 @@
 version: '3'
 
 services:
-  app: &app
+  app:
     build:
       context: .
       dockerfile: docker/app/Dockerfile
-    env_file: .env
     ports:
       - 3000:3000
     volumes:
@@ -14,12 +13,11 @@ services:
       - node-module-volume:/workspace/node_modules
     depends_on:
       - postgres
-    command: bash -c 'bin/setup && bin/rails s -b 0.0.0.0'
-  # webpacker:
-  #   <<: *app
-  #   command: bin/webpack-dev-server
-  #   ports:
-  #     - 3035:3035
+    command: bash -c 'rm -f tmp/pids/server.pid && bin/rails s -b 0.0.0.0'
+    environment:
+      - DB_HOST=postgres
+      - DB_USER=pg
+      - DB_PASSWORD=password
   postgres:
     image: postgres:14
     restart: unless-stopped
