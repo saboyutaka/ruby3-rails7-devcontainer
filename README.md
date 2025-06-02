@@ -1,6 +1,6 @@
-# devcontainer for Ruby 3 and Rails 7
+# devcontainer for Ruby 3 and Rails 8
 
-Ruby3, Ruby on Rails 7 の開発環境用の [devcontainer](https://code.visualstudio.com/docs/remote/containers)
+Ruby3, Ruby on Rails 8 の開発環境用の [devcontainer](https://code.visualstudio.com/docs/remote/containers)
 
 ## devcontainerを利用する
 
